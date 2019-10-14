@@ -1,0 +1,11 @@
+<div>
+    <mat-tab-group #matTabGroup (selectedTabChange)="log(matTabGroup.selectedIndex)">
+        <mat-tab label="angular">Angular</mat-tab>
+        <mat-tab label="react">React</mat-tab>
+        <mat-tab label="vue">Vue</mat-tab>
+    </mat-tab-group>
+    <p>Selected Index: {{matTabGroup.selectedIndex}}</p>
+    <p>
+        <a href="https://material.angular.io/components/tabs/overview" target="_blank">https://material.angular.io/components/tabs/overview</a>
+    </p>
+</div>

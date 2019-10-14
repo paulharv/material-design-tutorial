@@ -1,20 +1,50 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div>
+        <mat-toolbar color="primary" class="nav">
+            <div>Angular Material</div>
+            <div>
+                <button mat-button [matMenuTriggerFor]="namesMenu">Components</button>
+            </div>
+        </mat-toolbar>
+    </div>
+    <mat-menu #namesMenu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="formFieldsMenu">
+            <mat-icon>dialpad</mat-icon>
+            <span>Form Fields</span>
+        </button>
+        <button mat-menu-item [matMenuTriggerFor]="layoutMenu">
+            <mat-icon>dialpad</mat-icon>
+            <span>Layout</span>
+        </button>
+        <button mat-menu-item routerLink="/badges">Badges</button>
+        <button mat-menu-item routerLink="/button">Buttons</button>
+        <button mat-menu-item routerLink="/button-toggle">Button Toggle</button>
+        <button mat-menu-item routerLink="/datatable">Data Table</button>
+        <button mat-menu-item routerLink="/dialog">Dialog</button>
+        <button mat-menu-item routerLink="/grid-list">Grid List</button>
+        <button mat-menu-item routerLink="/icons">Icons</button>
+        <button mat-menu-item routerLink="/list">List</button>
+        <button mat-menu-item routerLink="/menu">Menu</button>
+        <button mat-menu-item routerLink="/scrolling">Scrolling</button>
+        <button mat-menu-item routerLink="/snackbar">Snackbar</button>
+        <button mat-menu-item routerLink="/spinners">Spinners & Progress Bars</button>
+        <button mat-menu-item routerLink="/stepper">Stepper</button>
+        <button mat-menu-item routerLink="/tabs">Tabs</button>
+        <button mat-menu-item routerLink="/toolbar">Toolbar</button>
+    </mat-menu>
+    <mat-menu #formFieldsMenu="matMenu">
+        <button mat-menu-item routerLink="/autocomplete">Auto Complete</button>
+        <button mat-menu-item routerLink="/checkbox">Checkbox</button>
+        <button mat-menu-item routerLink="/datepicker">Date Picker</button>
+        <button mat-menu-item routerLink="/input">Input</button>
+        <button mat-menu-item routerLink="/select">Select</button>
+        <button mat-menu-item routerLink="/tooltip">Tooltip</button>
+    </mat-menu>
+    <mat-menu #layoutMenu="matMenu">
+        <button mat-menu-item routerLink="/card">Card</button>
+        <button mat-menu-item routerLink="/expansion-panel">Expansion Panel</button>
+        <button mat-menu-item routerLink="/sidenav">Sidenav</button>
+    </mat-menu>
+    
+<div class="example-container">
+    <router-outlet></router-outlet>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-

@@ -1,0 +1,4 @@
+<div *ngIf="person">
+    <h1>You have selected {{person.name | uppercase}}</h1>
+    <input [(ngModel)]="person.name" placeholder="name"/>
+</div>

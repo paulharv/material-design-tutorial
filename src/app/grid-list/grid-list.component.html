@@ -1,0 +1,11 @@
+<button mat-raised-button color="primary" (click)="aGridList.rowHeight='200px'">Row Height is 200px</button> | 
+<button mat-raised-button color="primary" (click)="aGridList.rowHeight='2:1'">Row Height is 2:1</button> | 
+<button mat-raised-button color="primary" (click)="aGridList.rowHeight='1:1'">Row Height is 1:1 (Default)</button> | 
+<button mat-raised-button color="primary" (click)="aGridList.gutterSize='10px'">Gutter Size is 10px</button> | 
+<button mat-raised-button color="primary" (click)="aGridList.gutterSize='20px'">Gutter Size is 20px</button>
+<mat-grid-list cols="2" #aGridList>
+    <mat-grid-tile rowspan="2">Tile One</mat-grid-tile>
+    <mat-grid-tile>Tile Two</mat-grid-tile>
+    <mat-grid-tile>Tile Three</mat-grid-tile>
+    <mat-grid-tile colspan="2">Tile Four</mat-grid-tile>
+</mat-grid-list>

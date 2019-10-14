@@ -1,0 +1,26 @@
+<h3>Choose Year First...</h3>
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatepicker">
+    <mat-datepicker-toggle [for]="myDatepicker" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatepicker startView="multi-year"></mat-datepicker>
+</mat-form-field>
+
+<br/>
+<h3>Date Range</h3>
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatepickerRange" [min]=minDate [max]=maxDate>
+    <mat-datepicker-toggle [for]="myDatepickerRange" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatepickerRange></mat-datepicker>
+</mat-form-field>
+
+<br/>
+<h3>Filtered</h3>
+<mat-form-field>
+    <input matInput [matDatepicker]="myDatepickerFilter" [matDatepickerFilter]=filterDate>
+    <mat-datepicker-toggle [for]="myDatepickerFilter" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #myDatepickerFilter></mat-datepicker>
+</mat-form-field>
+
+<p>
+    <a href="https://material.angular.io/components/datepicker/overview" target="_blank">https://material.angular.io/components/datepicker/overview</a>
+</p>

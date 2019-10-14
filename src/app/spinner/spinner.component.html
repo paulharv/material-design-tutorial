@@ -1,0 +1,31 @@
+<div><h3>Spinners</h3></div>
+<div>
+    <!-- <mat-progress-spinner value="40"></mat-progress-spinner> -->
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    <button mat-stroked-button  (click)="loadData()">Load</button>
+</div>
+<div>
+    <mat-spinner *ngIf="toggleButton.checked"></mat-spinner>
+    <mat-button-toggle #toggleButton>Spin!</mat-button-toggle>
+</div>
+
+<div><h3>Progress Bars</h3></div>
+<div>
+    <mat-progress-bar [mode]="progressType.value" value="40"></mat-progress-bar>
+</div>
+<div>
+    <mat-button-toggle-group #progressType="matButtonToggleGroup">
+        <mat-button-toggle value="indeterminate">indeterminate</mat-button-toggle>
+        <mat-button-toggle value="determinate">determinate</mat-button-toggle>
+        <mat-button-toggle value="buffer">buffer</mat-button-toggle>
+        <mat-button-toggle value="query">query</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+<div>
+    <p><a href="https://material.angular.io/components/progress-spinner/overview" target="_blank">
+        https://material.angular.io/components/progress-spinner/overview
+    </a></p>
+    <p><a href="https://material.angular.io/components/progress-bar/overview" target="_blank">
+        https://material.angular.io/components/progress-bar/overview
+    </a></p>
+</div>

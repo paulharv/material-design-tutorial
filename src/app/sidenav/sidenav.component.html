@@ -1,0 +1,34 @@
+<mat-sidenav-container>
+    <mat-sidenav 
+        [(opened)]="opened"
+        [(mode)]="mode"    
+        #sideNavTemplateVar
+    >
+        mat-sidenav
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div>
+            <h3>Set modes programatically</h3>
+            <mat-button-toggle-group #navMode="matButtonToggleGroup" (click)="setMode(navMode.value)">
+                <mat-button-toggle value="over">Over</mat-button-toggle>
+                <mat-button-toggle value="push">Push</mat-button-toggle>
+                <mat-button-toggle value="side">Side</mat-button-toggle>
+                <mat-button-toggle value="none">Close</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+        <div>
+            <h3>Use Template Variable to Execute .open() and .close()   </h3>
+            <p>(Set to "Side" first)</p>
+            <button mat-raised-button color="primary" (click)="sideNavTemplateVar.open()">Open</button>
+            <button mat-raised-button color="primary" (click)="sideNavTemplateVar.close()">Close</button>
+        </div>
+        <div>
+            <h3 mat-raised-button color="primary" >Toggle</h3>
+            <p>(Set to "Side" first)</p>
+            <button (click)="sideNavTemplateVar.toggle()">Toggle</button>
+        </div>
+        <div>
+            <p><a href="https://material.angular.io/components/sidenav/overview" target="_blank">https://material.angular.io/components/sidenav/overview</a></p>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>   

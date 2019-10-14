@@ -1,0 +1,13 @@
+<div>
+    <span matBadgePosition="after above" [matBadge]="notifications" [matBadgeHidden]="notifications === 0" matBadgeOverlap="false" matBadgeColor="warn">Notifications</span>
+    
+    <div>
+            Notifications: <input [(ngModel)]="notifications"/><br/><br/>
+    </div>
+    <mat-button-toggle #show>Show Notifications for Home!</mat-button-toggle>
+    <mat-icon matBadge="1" [matBadgeHidden]="!show.checked">home</mat-icon>
+
+    <p><a href="https://material.angular.io/components/badge/overview" target="_blank">
+        https://material.angular.io/components/badge/overview</a></p>
+     
+</div>

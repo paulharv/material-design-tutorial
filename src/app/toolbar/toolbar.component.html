@@ -1,0 +1,14 @@
+<div>
+    <mat-toolbar color="primary" class="nav">
+        <div>Angular</div>
+        <div>
+            <span [matMenuTriggerFor]="namesMenu">Home (Click for Menu)</span>
+            <span [matMenuTriggerFor]="namesMenu">About</span>
+            <span [matMenuTriggerFor]="namesMenu">Services</span>
+        </div>
+    </mat-toolbar>
+</div>
+<mat-menu #namesMenu="matMenu">
+    <button mat-menu-item>Bob</button>
+    <button mat-menu-item>Jon</button>
+</mat-menu>

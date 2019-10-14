@@ -1,0 +1,28 @@
+
+<div>
+    <mat-button-toggle #toggleButton1>Toggle</mat-button-toggle>
+    On? {{toggleButton1.checked}}
+    
+    <mat-button-toggle #toggleButton2 checked>Toggle</mat-button-toggle>
+    On? {{toggleButton2.checked}}
+</div>
+
+<h3>One</h3>
+<div>
+    <mat-button-toggle-group #frameworksGroup1="matButtonToggleGroup">
+        <mat-button-toggle value="angular">Angular</mat-button-toggle>
+        <mat-button-toggle value="react">React</mat-button-toggle>
+        <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{frameworksGroup1.value}}
+</div>
+
+<h3>Multiple</h3>
+<div>
+    <mat-button-toggle-group #frameworksGroup2="matButtonToggleGroup" multiple>
+        <mat-button-toggle value="angular">Angular</mat-button-toggle>
+        <mat-button-toggle value="react">React</mat-button-toggle>
+        <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{frameworksGroup2.value}}
+</div>

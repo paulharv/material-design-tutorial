@@ -1,0 +1,38 @@
+<mat-menu #mainMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="progMenu">
+        <mat-icon>dialpad</mat-icon>
+        <span>Prog Rock</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="altMenu">
+            <mat-icon>dialpad</mat-icon>
+            <span>Alternative</span>
+    </button>
+</mat-menu>
+<mat-menu #progMenu="matMenu">
+    <button mat-menu-item>Genesis</button>
+    <button mat-menu-item>Yes</button>
+    <button mat-menu-item>Dream Theater</button>
+</mat-menu>
+<mat-menu #altMenu="matMenu">
+        <button mat-menu-item>U2</button>
+        <button mat-menu-item>Keane</button>
+        <button mat-menu-item>Cold Play</button>
+    </mat-menu>
+<button mat-flat-button [matMenuTriggerFor]="mainMenu">Open Menu</button>
+
+
+<button mat-raised-button [matMenuTriggerData]="{name:'Paul', hobby:'Photography'}" [matMenuTriggerFor]="dynamicMenu">Paul</button>
+<button mat-raised-button [matMenuTriggerData]="{name:'Maureen', hobby:'Teaching'}" [matMenuTriggerFor]="dynamicMenu">Maureen</button>
+<!--
+    to enable menu with dynamic content have to use ng-template directive
+    Seems cumbersome
+-->
+<mat-menu #dynamicMenu="matMenu">
+    <ng-template matMenuContent let-name="name" let-hobby="hobby"> <!-- let-name is like saying let name = dataObj["name"]. Could be let-identifier so long as it's used consistently -->
+        <button mat-menu-item>Option for {{name}}</button>
+        <button mat-menu-item>Hobby is {{hobby}}</button>
+    </ng-template>
+</mat-menu>
+<div>
+    <p><a href="https://material.angular.io/components/menu/overview" target="_blank">https://material.angular.io/components/menu/overview</a></p>
+</div>

@@ -1,0 +1,15 @@
+div.cont{
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+div.row{
+    border:1px solid lightgrey;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    font-size: 24pt;
+    height: 100px;
+}
+
+.viewport{
+    height: 400px;
+}

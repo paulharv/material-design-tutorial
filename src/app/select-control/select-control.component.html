@@ -1,0 +1,49 @@
+<div>
+    <h3>Single Select</h3>
+    <mat-form-field>
+        <mat-label>Topic</mat-label>
+        <mat-select [(value)]="selectedValue">
+            <mat-option>[None Selected]</mat-option>
+            <mat-optgroup label="Group One">
+                <mat-option value="one">Option One</mat-option>
+                <mat-option value="two">Option Two</mat-option>
+                <mat-option value="three">Option Three</mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="Group Two">
+                <mat-option value="A">Option A</mat-option>
+                <mat-option value="B">Option B</mat-option>
+            </mat-optgroup>
+        </mat-select>
+    </mat-form-field>
+    <p><b>selectedValue:</b>  {{selectedValue == null ? "NOTHING SELECTED" : selectedValue}}</p>
+    <br/>
+    <h3>Multi Select</h3>
+    <mat-form-field>
+        <mat-label>Topic</mat-label>
+        <mat-select [(value)]="selectedMultiValue" multiple>
+            <mat-optgroup label="Group One">
+                <mat-option value="one">Option One</mat-option>
+                <mat-option value="two">Option Two</mat-option>
+                <mat-option value="three">Option Three</mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="Group Two">
+                <mat-option value="A">Option A</mat-option>
+                <mat-option value="B">Option B</mat-option>
+            </mat-optgroup>
+        </mat-select>
+    </mat-form-field>
+    <p><b>selectedMultiValue:</b>  {{selectedMultiValue == null ? "NOTHING SELECTED" : selectedMultiValue}}</p>
+
+    <h3>Basic native select</h3>
+    <mat-form-field>
+        <mat-label>Cars</mat-label>
+        <select matNativeControl required>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+    </mat-form-field>
+
+    <p><a href="https://material.angular.io/components/select/overview" target="_blank">https://material.angular.io/components/select/overview</a></p>
+</div>

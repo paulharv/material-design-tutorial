@@ -1,0 +1,8 @@
+<mat-form-field>
+    <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]=fnDisplay>
+        <mat-option *ngFor="let option of options" [value]="option">{{option.name}}</mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+<p>I HAVE NOT COMPLETED THIS! SEE <a href="https://www.youtube.com/watch?v=zxaSPGDXAqo&list=PLC3y8-rFHvwilEuCqFGTL5Gt5U6deIrsU&index=21" target="_blank">https://www.youtube.com/watch?v=zxaSPGDXAqo&list=PLC3y8-rFHvwilEuCqFGTL5Gt5U6deIrsU&index=21</a></p>
+<p><a href="https://material.angular.io/components/autocomplete/overview" target="_blank">https://material.angular.io/components/autocomplete/overview</a></p>
